@@ -1,2 +1,3 @@
 # myproject
-django uygulama geliştirme
+This application is in the training and development phase
+
