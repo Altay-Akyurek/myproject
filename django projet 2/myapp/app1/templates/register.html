@@ -19,31 +19,35 @@
 <div class="login-page">
     
   <div class="form">
-    <form method="post" action="{% url 'user_login' %}">
-
+    <form method="post" action="{% url 'user_register' %}">
       {% csrf_token %}
-      {% if error %}
-        <div class="alert alert-danger">
-          {{error}}
-        </div>
-      {% endif %}
-
+      <p class="massange">
+        {% if error %}
+          <div class="custom-alert">
+            <i class="fa fa-exclamation-circle"></i> <!-- İkon ekleyebilirsin -->
+            {{ error }}
+          </div>
+        {% endif %}
+    </p>
       <lottie-player src="https://assets4.lottiefiles.com/datafiles/XRVoUu3IX4sGWtiC3MPpFnJvZNq7lVWDCa8LSqgS/profile.json" background="transparent" speed="1" style="justify-content: center;" loop autoplay></lottie-player>
-      
+    
       <input type="text" name="username" id="username" class="form-control" placeholder="&#xf007; username" required/><!--required bu alan zorunlu alan olsun diye yaptık-->
       
+      <input type="email" name="email" id="email" class="form-control" placeholder="&#xf007; email" required/>
+      
       <input type="password" name="password" id="password" class="form-control" placeholder="&#xf023;  password" required/>
+      
+      <input type="password" name="repassword" id="repassword" class="form-control" placeholder="&#xf023;  re-password" required/>
+      
       <i class="fas fa-eye" onclick="show()"></i> 
       
       <br>
       <br>
-      <button type="submit">LOGIN</button> <!-- 'type' niteliğini 'submit' olarak ekledim -->
+      <button type="submit" onclick="window.location.href='kayıt'">Register</button> <!-- 'type' niteliğini 'submit' olarak ekledim -->
       <p class="message"></p>
     </form>
 
-    <form class="login-form">
-      <button type="button" onclick="window.location.href='kayıt'" value="Login">SIGN UP</button>
-    </form>
+    
     <div class="github-button" style="margin-top: 20px;">
         <a href="https://github.com/Altay-Akyurek" target="_blank">
           <i class="fab fa-github fa-fade" style="font-size: 24px;"></i> GitHub

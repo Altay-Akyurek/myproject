@@ -29,21 +29,18 @@
       {% endif %}
 
       <lottie-player src="https://assets4.lottiefiles.com/datafiles/XRVoUu3IX4sGWtiC3MPpFnJvZNq7lVWDCa8LSqgS/profile.json" background="transparent" speed="1" style="justify-content: center;" loop autoplay></lottie-player>
-      
-      <input type="text" name="username" id="username" class="form-control" placeholder="&#xf007; username" required/><!--required bu alan zorunlu alan olsun diye yaptık-->
-      
-      <input type="password" name="password" id="password" class="form-control" placeholder="&#xf023;  password" required/>
       <i class="fas fa-eye" onclick="show()"></i> 
       
       <br>
       <br>
-      <button type="submit">LOGIN</button> <!-- 'type' niteliğini 'submit' olarak ekledim -->
-      <p class="message"></p>
+      
+      <div class="alert alert-success">
+        <strong>ONAYLANDI!</strong> Başarılı Bir Şekilde Üyeliğiniz Tamamlanmıştır , Ailemize Hoşgeldiniz.
+      </div>
+      
     </form>
 
-    <form class="login-form">
-      <button type="button" onclick="window.location.href='kayıt'" value="Login">SIGN UP</button>
-    </form>
+    
     <div class="github-button" style="margin-top: 20px;">
         <a href="https://github.com/Altay-Akyurek" target="_blank">
           <i class="fab fa-github fa-fade" style="font-size: 24px;"></i> GitHub
@@ -55,23 +52,7 @@
 
 
 
-<script>
-  function show(){
-    var password = document.getElementById("password");
-    var icon = document.querySelector(".fas");
 
-    // ========== Checking type of password =========== 
-    if(password.type === "password"){
-      password.type = "text";
-      icon.classList.remove("fa-eye"); // Göz simgesini değiştir
-      icon.classList.add("fa-eye-slash"); // Göz simgesini değiştir
-    }
-    else {
-      password.type = "password";
-      icon.classList.remove("fa-eye-slash"); // Göz simgesini değiştir
-      icon.classList.add("fa-eye"); // Göz simgesini değiştir
-    }
-  }
-</script>
+
 </body>
 </html>
